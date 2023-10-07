@@ -1,4 +1,4 @@
-const rose = document.getElementById('wind-rose')
+
 const heading = document.getElementById('heading')
 
 const stepCountDisplay = document.getElementById('step-count');
@@ -29,7 +29,6 @@ function initCompass() {
 function handler(e) {
   console.log(e)
   compass = e.webkitCompassHeading || Math.abs(e.alpha - 360)
-  rose.style.transform = `translate(-50%,-50%) rotate(${-compass}deg)`
   heading.innerText = Math.round(compass) + ' deg'
 }
 
