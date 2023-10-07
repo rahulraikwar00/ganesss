@@ -1,10 +1,9 @@
 
 const heading = document.getElementById('heading')
 
-const stepCountDisplay = document.getElementById('step-count');
 
 let compass
-let stepCount = 0;
+
 
 const isIOS = (
   navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
@@ -32,22 +31,4 @@ function handler(e) {
   heading.innerText = Math.round(compass) + ' deg'
 }
 
-
-
-// step counter
-function initStepCounter() {
-  if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', handleMotion, false);
-    console.log('yes step conter sppurted')
-  } else {
-    console.log('Step Counter not supported on this device/browser.');
-  }
-}
-
-function handleMotion(event) {
-  stepCount = event.accelerationIncludingGravity.x > 0 ? stepCount + 1 : stepCount;
-  // Update the step count display
-  stepCountDisplay.innerText = `Step Count: ${stepCount}`;
-}
 initCompass()
-initStepCounter()

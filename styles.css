@@ -1,4 +1,48 @@
-#heading {
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+    overscroll-behavior: none;
+}
+
+#content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #heading {
     margin: auto;
     font-size: 22px;
     text-align: center;
@@ -24,4 +68,4 @@
     background: url(https://cdn.onlinewebfonts.com/svg/img_467023.png) center
       no-repeat;
     background-size: contain;
-  }
+  } */
